@@ -26,10 +26,10 @@ $(".fluid-video-wrapper").fitVids();
         navigation: false,
         pagination: true,
         itemsCustom : [
-	        [0, 1],
-	        [700, 2],
-	        [960, 3]
-	    ],
+			[0, 1],
+			[700, 2],
+			[960, 3]
+		],
         navigationText: false
     });
 
@@ -41,7 +41,7 @@ $(".fluid-video-wrapper").fitVids();
 
 	/*--- Stat Counter ------------------------------------------------------- */
 	var statSection = $("#stats"),
-    	stats = $(".stat-count");
+		stats = $(".stat-count");
 
 statSection.waypoint({
 	handler: function(direction) {
@@ -54,11 +54,11 @@ statSection.waypoint({
 					easing: 'swing',
 					step: function (curValue) {
 						$this.text(Math.ceil(curValue));
-				    }
+					}
 				});
 			});
-       	} 
-    	this.destroy();      	
+		} 
+		this.destroy();      	
 	},		
 	offset: "90%"	
 });	
@@ -113,7 +113,7 @@ sections.waypoint( {
 			active_section = $('section#' + this.element.id);
 			if (direction === "up") active_section = active_section.prev();
 			var active_link = $('#main-nav-wrap a[href="#' + active_section.attr("id") + '"]');			
-        	navigation_links.parent().removeClass("current");
+			navigation_links.parent().removeClass("current");
 			active_link.parent().addClass("current");
 		}, 
 		offset: '25%'
@@ -126,9 +126,9 @@ $('.smoothscroll').on('click', function (e) {
     $target = $(target);
 
     $('html, body').stop().animate({
-    	'scrollTop': $target.offset().top
+			'scrollTop': $target.offset().top
     }, 800, 'swing', function () {
-    	window.location.hash = target;
+		window.location.hash = target;
     });
 });  
 
