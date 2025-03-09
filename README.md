@@ -1,4 +1,3 @@
 # Portafolio
-This web page is a small sample of what I can do, I hope you like them
 
-This is a web page where you can put your information, "Portfolio", you can follow me on my social networks and comment on any doubts you have regarding this document
+En la Actualización de esta ocacion se desarrolla la corrección de las tabulaciones y se agrega el documento en dodne se encuentra el cv (hoja de vida) para la descarga facil, sencilla y rapida para el desarrollo de actividades profecionales

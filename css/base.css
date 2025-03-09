@@ -1,25 +1,5 @@
-/**
- * =================================================================== 
- *
- *  Kards v1.0 Base Stylesheet
- *  url: styleshout.com
- *  03-01-2016
- *  ------------------------------------------------------------------
- *  TOC:
- *  01. reset
- *  02. basic/base setup styles
- *  03. grid
- *  04. MISC
- *
- * =================================================================== 
- */
-
-/** 
- * ===================================================================
- * 01. reset - normalize.css v3.0.2 | MIT License | git.io/normalize
- *
- * ------------------------------------------------------------------- 
- */
+/**===================================================================
+ * 01. reset - normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
 	font-family: sans-serif;
 	-ms-text-size-adjust: 100%;
@@ -30,26 +10,11 @@ body {
 	margin: 0;
 }
 
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-menu,
-nav,
-section,
-summary {
+article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary {
 	display: block;
 }
 
-audio,
-canvas,
-progress,
-video {
+audio,canvas,progress,video {
 	display: inline-block;
 	vertical-align: baseline;
 }
@@ -68,8 +33,7 @@ a {
 	background: transparent;
 }
 
-a:active,
-a:hover {
+a:active,a:hover {
 	outline: 0;
 }
 
@@ -77,8 +41,7 @@ abbr[title] {
 	border-bottom: 1px dotted;
 }
 
-b,
-strong {
+b,strong {
 	font-weight: bold;
 }
 
@@ -100,8 +63,7 @@ small {
 	font-size: 80%;
 }
 
-sub,
-sup {
+sub,sup {
 	font-size: 75%;
 	line-height: 0;
 	position: relative;
@@ -138,19 +100,12 @@ pre {
 	overflow: auto;
 }
 
-code,
-kbd,
-pre,
-samp {
+code,kbd,pre,samp {
 	font-family: monospace, monospace;
 	font-size: 1em;
 }
 
-button,
-input,
-optgroup,
-select,
-textarea {
+button,input,optgroup,select,textarea {
 	color: inherit;
 	font: inherit;
 	margin: 0;
@@ -160,15 +115,11 @@ button {
 	overflow: visible;
 }
 
-button,
-select {
+button,select {
 	text-transform: none;
 }
 
-button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
+button,html input[type="button"],input[type="reset"],input[type="submit"] {
 	-webkit-appearance: button;
 	cursor: pointer;
 }
@@ -178,8 +129,7 @@ html input[disabled] {
 	cursor: default;
 }
 
-button::-moz-focus-inner,
-input::-moz-focus-inner {
+button::-moz-focus-inner, input::-moz-focus-inner {
 	border: 0;
 	padding: 0;
 }
@@ -188,14 +138,12 @@ input {
 	line-height: normal;
 }
 
-input[type="checkbox"],
-input[type="radio"] {
+input[type="checkbox"], input[type="radio"] {
 	box-sizing: border-box;
 	padding: 0;
 }
 
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
 	height: auto;
 }
 
@@ -241,19 +189,14 @@ th {
 }
 
 /** 
- * ===================================================================
- * 02. basic/base setup styles - (_basic.scss)
- *
- * ------------------------------------------------------------------- 
- */
+===================================================================
+	* 2. basic/base setup styles - (_basic.scss) */
 html {
 	font-size: 62.5%;
 	box-sizing: border-box;
 }
 
-*,
-*::before,
-*::after {
+*,*::before,*::after {
 	box-sizing: inherit;
 }
 
@@ -266,70 +209,36 @@ body {
 	-webkit-text-size-adjust: none;
 }
 
-body,
-input,
-button {
+body,input,button {
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 }
 
-/**
- * Media - (_basic.scss)
- * ------------------------------------------------------------------- 
- */
-img,
-video {
+/** Media - (_basic.scss)*/
+img, video {
 	max-width: 100%;
 	height: auto;
 }
 
-/**
- * Typography resets - (_basic.scss)
- * ------------------------------------------------------------------- 
- */
-div,
-dl,
-dt,
-dd,
-ul,
-ol,
-li,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-pre,
-form,
-p,
-blockquote,
-th,
-td {
+/** Typography resets - (_basic.scss) */
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,th,td {
 	margin: 0;
 	padding: 0;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1,h2,h3,h4,h5,h6 {
 	-webkit-font-variant-ligatures: common-ligatures;
 	-moz-font-variant-ligatures: common-ligatures;
 	font-variant-ligatures: common-ligatures;
 	text-rendering: optimizeLegibility;
 }
 
-em,
-i {
+em,i {
 	font-style: italic;
 	line-height: inherit;
 }
 
-strong,
-b {
+strong,b {
 	font-weight: bold;
 	line-height: inherit;
 }
@@ -339,8 +248,7 @@ small {
 	line-height: inherit;
 }
 
-ol,
-ul {
+ol,ul {
 	list-style: none;
 }
 
@@ -348,10 +256,7 @@ li {
 	display: block;
 }
 
-/**
- * links - (_basic.scss)
- * ------------------------------------------------------------------- 
- */
+/** links - (_basic.scss)*/
 a {
 	text-decoration: none;
 	line-height: inherit;
@@ -361,10 +266,7 @@ a img {
 	border: none;
 }
 
-/**
- * inputs - (_basic.scss)
- * ------------------------------------------------------------------- 
- */
+/** inputs - (_basic.scss)*/
 fieldset {
 	margin: 0;
 	padding: 0;
@@ -385,20 +287,15 @@ textarea {
 	appearance: none;
 }
 
-/** 
- * ===================================================================
- * 03. grid - (_grid.scss)
- *
- * ------------------------------------------------------------------- 
- */
+/** ===================================================================
+ * 03. grid - (_grid.scss) */
 .row {
 	width: 94%;
 	max-width: 1140px;
 	margin: 0 auto;
 }
 
-.row:before,
-.row:after {
+.row:before, .row:after {
 	content: "";
 	display: table;
 }
@@ -431,18 +328,15 @@ textarea {
 	width: 8.33333%;
 }
 
-.col-two,
-.col-1-6 {
+.col-two, .col-1-6 {
 	width: 16.66667%;
 }
 
-.col-three,
-.col-1-4 {
+.col-three, .col-1-4 {
 	width: 25%;
 }
 
-.col-four,
-.col-1-3 {
+.col-four, .col-1-3 {
 	width: 33.33333%;
 }
 
@@ -450,8 +344,7 @@ textarea {
 	width: 41.66667%;
 }
 
-.col-six,
-.col-1-2 {
+.col-six, .col-1-2 {
 	width: 50%;
 }
 
@@ -459,18 +352,15 @@ textarea {
 	width: 58.33333%;
 }
 
-.col-eight,
-.col-2-3 {
+.col-eight, .col-2-3 {
 	width: 66.66667%;
 }
 
-.col-nine,
-.col-3-4 {
+.col-nine, .col-3-4 {
 	width: 75%;
 }
 
-.col-ten,
-.col-5-6 {
+.col-ten, .col-5-6 {
 	width: 83.33333%;
 }
 
@@ -478,15 +368,11 @@ textarea {
 	width: 91.66667%;
 }
 
-.col-twelve,
-.col-full {
+.col-twelve, .col-full {
 	width: 100%;
 }
 
-/**
- * small screens - (_grid.scss)
- * --------------------------------------------------------------- 
- */
+/** small screens - (_grid.scss) */
 @media screen and (max-width:1024px) {
 	.row .row {
 		margin-left: -18px;
@@ -499,10 +385,7 @@ textarea {
 
 }
 
-/**
- * tablets - (_grid.scss)
- * --------------------------------------------------------------- 
- */
+/** tablets - (_grid.scss) */
 @media screen and (max-width:768px) {
 	.row {
 		width: auto;
@@ -547,10 +430,7 @@ textarea {
 
 }
 
-/**
- * large mobile devices - (_grid.scss)
- * --------------------------------------------------------------- 
- */
+/** large mobile devices - (_grid.scss) */
 @media screen and (max-width:600px) {
 	.row {
 		padding-left: 25px;
@@ -584,10 +464,7 @@ textarea {
 
 }
 
-/**
- * small mobile devices - (_grid.scss)
- * --------------------------------------------------------------- 
- */
+/** small mobile devices - (_grid.scss) */
 @media screen and (max-width:400px) {
 	.row .row {
 		padding-left: 0;
@@ -611,12 +488,8 @@ textarea {
 
 }
 
-/** 
- * ===================================================================
- * block grids - (_grid.scss)
- *
- * ------------------------------------------------------------------- 
- */
+/** ===================================================================
+ * block grids - (_grid.scss)*/
 [class*="block-"]:before,
 [class*="block-"]:after {
 	content: "";
@@ -643,10 +516,6 @@ textarea {
 	width: 50%;
 }
 
-/**
- * Clearing for block grid columns. Allow columns with 
- * different heights to align properly.
- */
 .block-1-6 .bgrid:nth-child(6n+1),
 .block-1-4 .bgrid:nth-child(4n+1),
 .block-1-3 .bgrid:nth-child(3n+1),
@@ -654,10 +523,7 @@ textarea {
 	clear: both;
 }
 
-/**
- * small screens - (_grid.scss)
- * --------------------------------------------------------------- 
- */
+/** small screens - (_grid.scss) */
 @media screen and (max-width:1024px) {
 	.block-s-1-6 .bgrid {
 		width: 16.66667%;
@@ -693,10 +559,7 @@ textarea {
 
 }
 
-/**
- * tablets - (_grid.scss)
- * --------------------------------------------------------------- 
- */
+/** tablets - (_grid.scss) */
 @media screen and (max-width:768px) {
 	.block-tab-1-6 .bgrid {
 		width: 16.66667%;
@@ -732,10 +595,7 @@ textarea {
 
 }
 
-/**
- * large mobile devices - (_grid.scss)
- * --------------------------------------------------------------- 
- */
+/** large mobile devices - (_grid.scss= */
 @media screen and (max-width:600px) {
 	.block-mob-1-6 .bgrid {
 		width: 16.66667%;
@@ -771,10 +631,7 @@ textarea {
 
 }
 
-/**
- * stack on small mobile devices - (_grid.scss)
- * --------------------------------------------------------------- 
- */
+/** stack on small mobile devices - (_grid.scss) */
 @media screen and (max-width:400px) {
 	.stack .bgrid {
 		width: 100% !important;
@@ -786,18 +643,10 @@ textarea {
 
 }
 
-/** 
- * ===================================================================
- * 04. MISC  - (_grid.scss)
- *
- * ------------------------------------------------------------------- 
- */
+/** ===================================================================
+ * 04. MISC  - (_grid.scss)*/
 
-/**
- * Clearing - (http://nicolasgallagher.com/micro-clearfix-hack/
- */
-.group:before,
-.group:after {
+.group:before,.group:after {
 	content: "";
 	display: table;
 }
@@ -806,9 +655,7 @@ textarea {
 	clear: both;
 }
 
-/**
- * Misc Helper Styles 
- */
+/** Misc Helper Styles */
 .hide {
 	display: none;
 }
@@ -867,5 +714,3 @@ textarea {
 	margin-right: auto;
 	text-align: center;
 }
-
-/*# sourceMappingURL=base.css.map */
