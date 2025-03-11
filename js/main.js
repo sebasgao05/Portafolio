@@ -230,3 +230,48 @@ if (changeTextButton) {
         }
     });
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const colorPicker = document.getElementById('color-picker');
+	const colorBox = document.querySelector('.color-box');
+    const applyColorButton = document.getElementById('apply-color');
+
+    applyColorButton.addEventListener('click', () => {
+        const selectedColor = colorPicker.value;
+
+		if (confirm('¿Estás seguro de que quieres aplicar este color a los elementos?')) {
+			colorBox.style.backgroundColor = selectedColor;
+
+			document.querySelectorAll('h2, h3, h4, h5, h6').forEach(el => {
+				el.style.color = selectedColor;
+			});
+
+			document.querySelectorAll('.services-list .icon i').forEach(icon => {
+				icon.style.color = selectedColor;
+			});
+
+			const goTopBtn = document.querySelector('#go-top a');
+			goTopBtn.style.backgroundColor = selectedColor;
+
+			const styleTag = document.getElementById('dynamic-menu-colors') || document.createElement('style');
+			styleTag.id = 'dynamic-menu-colors';
+			styleTag.innerHTML = `
+                .owl-theme .owl-controls .owl-page.active span,
+				.menu-toggle span, 
+				.menu-toggle span::before,
+				.menu-toggle span::after {
+					background-color: ${selectedColor} !important;
+				}
+			`;
+
+			if (!document.getElementById('dynamic-menu-colors')) {
+				document.head.appendChild(styleTag);
+			}
+
+			document.querySelectorAll('.services-list .icon i').forEach(icon => {
+				icon.style.color = selectedColor;
+			});
+		}
+	});
+});
+

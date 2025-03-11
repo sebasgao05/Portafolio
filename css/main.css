@@ -1437,6 +1437,7 @@ header .logo a {
 	font-size: 1.5rem;
 	line-height: 1;
 }
+
 .about-content .skill-bars {
 	margin-top: 6rem;
 }
@@ -2061,6 +2062,31 @@ header .logo a {
 #stats .stat-title {
 	color: rgba(255, 255, 255, 0.5);
 }
+
+.color-changer-section {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.color-box {
+    width: 50%;
+    height: 200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #91af23; /* color por defecto */
+    color: white;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    transition: background-color 0.5s ease;
+}
+
+.color-picker-container {
+    margin-bottom: 2rem;
+}
+
 
 /** responsive:
  * stats*/
