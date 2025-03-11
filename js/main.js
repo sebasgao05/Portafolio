@@ -259,9 +259,31 @@ document.addEventListener('DOMContentLoaded', () => {
                 .owl-theme .owl-controls .owl-page.active span,
 				.menu-toggle span, 
 				.menu-toggle span::before,
-				.menu-toggle span::after {
+				.menu-toggle span::after,
+				#go-top {
 					background-color: ${selectedColor} !important;
 				}
+				button.stroke:hover,
+				.button.stroke:hover {
+					border: 3px solid ${selectedColor} !important;
+					color: ${selectedColor} !important;
+				}
+				.main-navigation li.current > a,
+				.main-navigation li a:hover,
+				.intro-social li a:hover,
+				.intro-social li a:focus, 
+				.footer-social li a:hover, 
+				.footer-social li a:focus,
+				a, a:visited {
+					color: ${selectedColor} !important;
+				}
+				#go-top a,
+				.intro-social li a, 
+				.intro-social li a:visited, 
+				.footer-social li a, 
+				.footer-social li a:visited{
+					color: #fff !important;
+				}	
 			`;
 
 			if (!document.getElementById('dynamic-menu-colors')) {

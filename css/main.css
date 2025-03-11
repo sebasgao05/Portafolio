@@ -1288,7 +1288,7 @@ header .logo a {
 	left: 1.2rem;
 }
 
-.intro-social {
+.intro-social, .footer-social {
 	display: block;
 	position: absolute;
 	width: 100%;
@@ -1298,15 +1298,15 @@ header .logo a {
 	margin: 0;
 	padding: 0;
 }
-.intro-social li {
+.intro-social li, .footer-social li {
 	display: inline-block;
 	margin: 0 20px;
 	padding: 0;
 }
-.intro-social li a, .intro-social li a:visited {
+.intro-social li a, .intro-social li a:visited, .footer-social li a, .footer-social li a:visited {
 	color: #FFFFFF;
 }
-.intro-social li a:hover, .intro-social li a:focus {
+.intro-social li a:hover, .intro-social li a:focus, .footer-social li a:hover, .footer-social li a:focus {
 	color: #18cc00;
 }
 
@@ -2357,9 +2357,11 @@ footer {
 footer a, footer a:visited {
 	color: #FFFFFF;
 }
+
 footer a:hover, footer a:focus {
 	color: #91af23;
 }
+
 footer .row {
 	max-width: 900px;
 }
