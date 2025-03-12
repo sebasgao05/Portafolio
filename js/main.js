@@ -233,14 +233,18 @@ if (changeTextButton) {
 
 document.addEventListener('DOMContentLoaded', () => {
     const colorPicker = document.getElementById('color-picker');
+	const secondarycolorPicker = document.getElementById('secondary-color-picker');
+
 	const colorBox = document.querySelector('.color-box');
     const applyColorButton = document.getElementById('apply-color');
 
     applyColorButton.addEventListener('click', () => {
         const selectedColor = colorPicker.value;
+		const selectedColor2 = secondarycolorPicker.value;
 
 		if (confirm('¿Estás seguro de que quieres aplicar este color a los elementos?')) {
 			colorBox.style.backgroundColor = selectedColor;
+			colorBox.style.color = selectedColor2;
 
 			document.querySelectorAll('h2, h3, h4, h5, h6').forEach(el => {
 				el.style.color = selectedColor;
@@ -256,34 +260,41 @@ document.addEventListener('DOMContentLoaded', () => {
 			const styleTag = document.getElementById('dynamic-menu-colors') || document.createElement('style');
 			styleTag.id = 'dynamic-menu-colors';
 			styleTag.innerHTML = `
-                .owl-theme .owl-controls .owl-page.active span,
-				.menu-toggle span, 
-				.menu-toggle span::before,
-				.menu-toggle span::after,
-				#go-top {
-					background-color: ${selectedColor} !important;
-				}
-				button.stroke:hover,
-				.button.stroke:hover {
-					border: 3px solid ${selectedColor} !important;
-					color: ${selectedColor} !important;
-				}
-				.main-navigation li.current > a,
-				.main-navigation li a:hover,
-				.intro-social li a:hover,
-				.intro-social li a:focus, 
-				.footer-social li a:hover, 
-				.footer-social li a:focus,
-				a, a:visited {
-					color: ${selectedColor} !important;
-				}
+
 				#go-top a,
+				.main-navigation li a ,
 				.intro-social li a, 
 				.intro-social li a:visited, 
 				.footer-social li a, 
 				.footer-social li a:visited{
 					color: #fff !important;
-				}	
+				}
+				.menu-toggle.is-clicked span {
+					background-color: rgba(255, 0, 119, 0) !important;
+				}
+
+				.button.stroke:hover {
+					border: 3px solid ${selectedColor} !important;
+					color: ${selectedColor} !important;
+				}
+				.main-navigation li a:hover,
+				.intro-social li a:hover, 
+				.footer-social li a:hover, 
+				a{
+					color: ${selectedColor} !important;
+				}
+
+				.owl-theme .owl-controls .owl-page.active span,
+				.menu-toggle span, 
+				.menu-toggle span::before,
+				.menu-toggle span::after,
+				.popup-modal .link-box a:hover,
+				#go-top a:hover {
+					background-color: ${selectedColor2} !important;
+				}
+				a:visited {
+					color: ${selectedColor2} !important;
+				}
 			`;
 
 			if (!document.getElementById('dynamic-menu-colors')) {
