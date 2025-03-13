@@ -289,7 +289,8 @@ document.addEventListener('DOMContentLoaded', () => {
 				.menu-toggle span::before,
 				.menu-toggle span::after,
 				.popup-modal .link-box a:hover,
-				#go-top a:hover {
+				#go-top a:hover,
+				.skill-bars li .progress {
 					background-color: ${selectedColor2} !important;
 				}
 				a:visited {
@@ -308,3 +309,73 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 });
 
+/* ==========explicacion de que se usa cada parte del css al reaccionar por el cambio del usuario=================
+.owl-theme .owl-controls .owl-page.active span
+	Apartado de pagina en la seccion de servicios
+		(background-color)
+
+.menu-toggle span 
+	Barra de menú centra
+		(background-color)
+
+.menu-toggle span::before 
+	Barra de menú central
+		(background-color)
+
+.menu-toggle span::after 
+	Barra de menú central
+		(background-color)
+
+.popup-modal .link-box a:hover
+	Fondo Boton de sección dentro de foto
+		(background-color)
+
+#go-top a:hove
+	Fondo botón al seleccionar para subir
+		(background-color)
+
+.button.stroke:hover
+	Borde y letra de botones
+		(border: 3px solid #color !important; % color)
+
+.main-navigation li a:hover
+	Color al pasar el mouse en alguna opción del menú
+		(color)
+
+.intro-social li a:hover, .footer-social li a:hover
+	Color al pasar el mouse en alguna red social del intro
+		(color)
+
+a:visited
+	Color del enlace 
+		(color)
+
+#go-top a
+	color flecha del botón para subir
+		(color)
+
+.main-navigation li a, 
+	.intro-social li a, 
+	.intro-social li a:visited, 
+	.footer-social li a, 
+	.footer-social li a:visited
+		Color base del menú (blanco)
+			color
+
+.menu-toggle.is-clicked span
+	Pasar a transparente para menú cuando se selecciona
+		background-color: rgba(255, 0, 119, 0) !important;
+*/
+
+document.addEventListener('DOMContentLoaded', () => {
+    const progressBars = document.querySelectorAll('.progress');
+
+    progressBars.forEach(bar => {
+        const targetWidth = bar.style.width;
+        bar.style.width = '0';
+
+        setTimeout(() => {
+            bar.style.width = targetWidth;
+        }, 500); // Retardo de animación (opcional)
+    });
+});
