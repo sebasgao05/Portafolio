@@ -316,6 +316,15 @@ img.pull-left {
 	margin: .9rem 2.4rem 0 0;
 }
 
+img {
+    width: 100%; /* Se ajusta al contenedor sin deformarse */
+    height: auto; /* Mantiene la proporción original */
+    max-width: 100%; /* No permite que crezca más de su tamaño natural */
+    object-fit: contain; /* Mantiene toda la imagen sin recortarla */
+    display: block;
+    margin: 0 auto; /* Centra la imagen si está en un contenedor */
+}
+
 /** block grid paddings - (_document-setup.scss) */
 .bgrid {
 	padding: 0 20px;
