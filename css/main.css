@@ -316,7 +316,7 @@ img.pull-left {
 	margin: .9rem 2.4rem 0 0;
 }
 
-img {
+.intro-info img {
     width: 100%; /* Se ajusta al contenedor sin deformarse */
     height: auto; /* Mantiene la proporción original */
     max-width: 100%; /* No permite que crezca más de su tamaño natural */
